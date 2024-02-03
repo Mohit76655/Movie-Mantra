@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { fetchDataFromApi } from "./utils/api";
+import { useSelector, useDispatch } from "react-redux";
+import { getApiConfigration } from "./store/homeSlice";
 
 function App() {
+  const dispatch = useDispatch();
+
   useEffect(() => {
     apiTest();
   }, []);
@@ -9,6 +13,7 @@ function App() {
   const apiTest = () => {
     fetchDataFromApi("/movie/popular").then((res) => {
       console.log(res);
+      dispatch(getApiConfigration(res));
     });
   };
 
