@@ -19,13 +19,20 @@ function App() {
   console.log(url);
 
   useEffect(() => {
-    apiTest();
+    fetchApiConfig();
   }, []);
 
-  const apiTest = () => {
-    fetchDataFromApi("/movie/popular").then((res) => {
+  const fetchApiConfig = () => {
+    fetchDataFromApi("/configuration").then((res) => {
       console.log(res);
-      dispatch(getApiConfigration(res));
+
+      const url = {
+        backdrop: res.images.secure_base_url + "original",
+        poster: res.images.secure_base_url + "original",
+        profile: res.images.secure_base_url + "original",
+      };
+
+      dispatch(getApiConfigration(url));
     });
   };
 
