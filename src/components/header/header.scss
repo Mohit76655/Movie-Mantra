@@ -29,8 +29,16 @@
     }
     .logo {
         cursor: pointer;
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+        h2{
+            background: radial-gradient(circle at 10% 20%, rgb(253, 203, 50) 0%, rgb(244, 56, 98) 100.2%);
+            background-clip: text;
+            color: transparent;
+        }
         img {
-            height: 50px;
+            height: 45px;
         }
     }
     .menuItems {
