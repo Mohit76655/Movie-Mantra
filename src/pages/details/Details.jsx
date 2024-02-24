@@ -1,7 +1,7 @@
 import React from "react";
 import "./details.scss";
 
-const D = () => {
+const Details = () => {
   return <div>Details</div>;
 };
 
