@@ -8,4 +8,6 @@ Feature's:
 
 1) Infinite Scroll 
 
-2) Lazy Loading 
+2) Lazy Loading
+
+3) conditional rendering
