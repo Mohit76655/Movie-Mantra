@@ -11,3 +11,7 @@ Feature's:
 2) Lazy Loading
 
 3) conditional rendering
+
+******** Note ********
+Working on Containerization with Docker
+***********************
